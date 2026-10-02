@@ -1,0 +1,174 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+    cout << "Ingrese un numero entero: ";
+    cin >> numero;
+    
+    numero = numero * 2;
+    
+    cout << "El doble del numero es: " << numero << endl;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y;
+    cout << "Ingrese dos numeros enteros separados por un espacio: ";
+    cin >> x >> y;
+    
+    cout << "El valor de x es: " << x << endl;
+    cout << "El valor de y es: " << y << endl;
+    
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int totalSegundos, minutos, segundosRestantes;
+    
+    cout << "Ingrese la cantidad total de segundos: ";
+    cin >> totalSegundos;
+    
+    minutos = totalSegundos / 60;
+    segundosRestantes = totalSegundos % 60;
+    
+    cout << totalSegundos << " segundos equivalen a: " 
+         << minutos << " minuto(s) y " 
+         << segundosRestantes << " segundo(s)." << endl;
+         
+    return 0;
+}
+#include <iostream.h> // Sintaxis clásica del documento
+#define  6
+void main (void) {
+    int A,B,C;
+    cin >> A >> B;
+    C = 2 * A - B;
+    C = C - H;
+    Z = A + C - X;
+    A = B + R;
+    cout << A << endl;
+    B = -1;
+    cout << B << endl;
+}
+#include <iostream>
+#include <iomanip> // Requerido para manipular formatos de salida
+using namespace std;
+
+int main() {
+    double valor = 123.456789;
+
+    cout << "1. Formato por defecto: " << valor << endl;
+    cout << "2. Formato con 2 decimales (fixed): " << fixed << setprecision(2) << valor << endl;
+    cout << "3. Formato cientifico: " << scientific << valor << endl;
+    cout << "4. Formato alineado con ancho (width 15): " << setw(15) << valor << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Ingrese tres numeros enteros: ";
+    cin >> a >> b >> c;
+
+    if (a <= b && b <= c) {
+        cout << "Los numeros estan ordenados de menor a mayor (ascendente)." << endl;
+    } else if (a >= b && b >= c) {
+        cout << "Los numeros estan ordenados de mayor a menor (descendente)." << endl;
+    } else {
+        cout << "Los numeros no estan en orden numerico." << endl;
+    }
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+bool esPrimo(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+bool esPotenciaDeDos(int n) {
+    return (n > 0) && ((n & (n - 1)) == 0);
+}
+
+int main() {
+    int num;
+    cout << "Ingrese un numero entero: ";
+    cin >> num;
+
+    if (num < 0 || num >= 30) {
+        cout << "El numero es negativo o es mayor/igual a 30." << endl;
+    } else if (num == 0) {
+        cout << "Cero" << endl;
+    } else if (num == 1) {
+        cout << "Unidad" << endl;
+    } else {
+        if (esPotenciaDeDos(num)) {
+            cout << "El numero es una potencia de 2." << endl;
+        } 
+        
+        if (esPrimo(num)) {
+            cout << "El numero es un numero primo." << endl;
+        } else {
+            cout << "El numero es un numero compuesto." << endl;
+        }
+    }
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    double n1, n2, n3;
+    cout << "Ingrese tres numeros: ";
+    cin >> n1 >> n2 >> n3;
+
+    double mayor = n1;
+
+    if (n2 > mayor) {
+        mayor = n2;
+    }
+    if (n3 > mayor) {
+        mayor = n3;
+    }
+
+    cout << "El mayor de los tres numeros es: " << mayor << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    float nota;
+    cout << "Ingrese la nota (0.0 a 10.0): ";
+    cin >> nota;
+
+    if (nota < 0.0 || nota > 10.0) {
+        cout << "Nota fuera de rango valido." << endl;
+    } else if (nota < 5.0) {
+        cout << "Suspenso" << endl;
+    } else if (nota < 6.5) {
+        cout << "Aprobado" << endl;
+    } else if (nota < 8.5) {
+        cout << "Notable" << endl;
+    } else if (nota < 10.0) {
+        cout << "Sobresaliente" << endl;
+    } else {
+        cout << "Matricula de honor" << endl;
+    }
+
+    return 0;
+}
